@@ -2,6 +2,8 @@
 
 A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)**. It hooks the game's text rendering to load translations and render CJK fonts with proper scaling.
 
+![preview](preview.png)
+
 ## Features
 
 - Multi-language support via `Language=zh|en` setting
