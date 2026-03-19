@@ -9,6 +9,7 @@ x86/
 *.exe
 *.dll
 *.lib
+!ThirdParty/**/*.lib
 *.exp
 *.log
 *.tlog

@@ -181,6 +181,10 @@
     <ClInclude Include="RBR\RBRAPI.h" />
     <ClInclude Include="Utils\LogUtil.h" />
     <ClInclude Include="Utils\SimpleIni.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RBRi18n.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

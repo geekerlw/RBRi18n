@@ -1,0 +1,30 @@
+#include <winver.h>
+#include "version.h"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    VER_FILE_VERSION
+PRODUCTVERSION VER_PRODUCT_VERSION
+FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+FILEFLAGS      0
+FILEOS         VOS_NT_WINDOWS32
+FILETYPE       VFT_DLL
+FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription",  "RBRi18n - Internationalization plugin for Richard Burns Rally"
+            VALUE "FileVersion",      VER_FILE_VERSION_STR
+            VALUE "InternalName",     "RBRi18n"
+            VALUE "LegalCopyright",   "MIT License"
+            VALUE "OriginalFilename", "RBRi18n.dll"
+            VALUE "ProductName",      "RBRi18n"
+            VALUE "ProductVersion",   VER_PRODUCT_VERSION_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
