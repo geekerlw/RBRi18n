@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX">
+      <UniqueIdentifier>{B1C2D3E4-F5A6-7890-BCDE-F12345678901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RBR">
+      <UniqueIdentifier>{C2D3E4F5-A6B7-8901-CDEF-123456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX">
+      <UniqueIdentifier>{E4F5A6B7-C8D9-0123-EFAB-345678901234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RBR">
+      <UniqueIdentifier>{F5A6B7C8-D9E0-1234-FABC-456789012345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{A6B7C8D9-E0F1-2345-ABCD-567890123456}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RBRi18n.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\D3D9Font\D3DFont.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\D3D9Font\SharedFont.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="RBR\HackMenuText.cpp">
+      <Filter>Source Files\RBR</Filter>
+    </ClCompile>
+    <ClCompile Include="RBR\IRBRGame.cpp">
+      <Filter>Source Files\RBR</Filter>
+    </ClCompile>
+    <ClCompile Include="RBR\RBRAPI.cpp">
+      <Filter>Source Files\RBR</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\LogUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RBRi18n.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\D3D9Font\D3DFont.h">
+      <Filter>Header Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\D3D9Font\SharedFont.h">
+      <Filter>Header Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\d3dx9_compatibility.h">
+      <Filter>Header Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="RBR\HackMenuText.h">
+      <Filter>Header Files\RBR</Filter>
+    </ClInclude>
+    <ClInclude Include="RBR\IPlugin.h">
+      <Filter>Header Files\RBR</Filter>
+    </ClInclude>
+    <ClInclude Include="RBR\IRBRGame.h">
+      <Filter>Header Files\RBR</Filter>
+    </ClInclude>
+    <ClInclude Include="RBR\RBRAPI.h">
+      <Filter>Header Files\RBR</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\LogUtil.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\SimpleIni.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

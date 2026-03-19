@@ -1,0 +1,92 @@
+[Translations]
+; SimRallyCN plugin
+Utils=实用工具
+
+; Car manager
+Car manager=车辆管理器
+Download Cars=已下载的车辆
+Download setups:=下载车辆调校：
+Reset car:=重置车辆：
+Re-download and reset the car=重新下载并重置车辆
+Resets a car model and skin (setups and camera settings are not lost)=重置车辆模型和皮肤(设置和相机设置不会丢失)
+Car audio:=车辆音效
+Apply changes (audio selection)=应用更改(音效选择)
+TrackSettings Download=赛道设置下载
+Car cache clear=清除车辆缓存
+
+; RBR Controls
+RBR Controls=子夜按键设置（不包含方向、油门刹车离合）
+Page=按回车设置，按Del清除，键盘←和→翻页，共4页
+Save Settings=保存本页设置
+JoyKey=启用本页按键设置功能
+ENABLED=已启用
+Esc=Esc键（键盘映射）
+Backspace=退格键Backspace（键盘映射）
+Enter=回车键Enter（键盘映射）
+Space=空格键Space（键盘映射）
+Left Shift=左Shift键（键盘映射）
+Left Control=左Ctrl键（键盘映射）
+Control+S=Ctrl+S键（键盘映射）
+Page Up=上翻页键Page Up（键盘映射）
+Page Down=下翻页键Page Down（键盘映射）
+Home=主页键Home（键盘映射）
+End=结束键End（键盘映射）
+Delete=删除键Delete（键盘映射）
+Ignition=发动机点火
+Restart Stage=重新开始本赛段日(仅在练习和热身时)
+Call for Help=观众救援抬车
+Retire Stage=退出比赛
+Exit RBR=一键退出游戏程序
+F1=F1键（键盘映射）
+F9=F9键（键盘映射）
+F11=F11键（键盘映射）
+Numpad 4=小键盘4键（键盘映射）
+Numpad 6=小键盘6键（键盘映射）
+Numpad 8=小键盘8键（键盘映射）
+Numpad 2=小键盘2键（键盘映射）
+Numpad 0=小键盘0键（键盘映射）
+Numpad +=小键盘+键（键盘映射）
+Numpad -=小键盘 - 键（键盘映射）
+Numpad *=小键盘 * 键（键盘映射）
+Custom1=自定义1(先到RBRControls.ini加键码值)
+Custom2=自定义2(先到RBRControls.ini加键码值)
+Custom3=自定义3(先到RBRControls.ini加键码值)
+
+; H-Shifter
+HShifter=启用本页排档设置(先清原设置所有挡位)
+Gear Volume=H换挡失败音效的音量
+Type Change Volume=H模式与序列模式切换提示音量
+Type=变速箱类型(序列或H)跟随车辆或指定
+Auto Neutral=H档自动挂入空挡N(1-6,R均未激活时)
+Clutch Required=H换挡是否需踩离合(跟随车辆或指定)
+Clutch Threshold=离合器结合的阈值
+H-Pattern Gear 1=H挡 1挡位
+H-Pattern Gear 2=H挡 2挡位
+H-Pattern Gear 3=H挡 3挡位
+H-Pattern Gear 4=H挡 4挡位
+H-Pattern Gear 5=H挡 5挡位
+H-Pattern Gear 6=H挡 6挡位
+H-Pattern Gear R=H挡 R挡位
+Sequential N=序列式变速箱一键回N挡位
+Sequential Up=序列式变速箱升档+
+Sequential Down=序列式变速箱降档 -
+Toggle Type=游戏内H挡与序列挡一键模式切换
+VR Reset View=VR重置视角
+VR Debug Toggle=VR调试开关
+Move Seat Forward=前移座椅
+Move Seat Right=右移座椅
+Move Seat Backward=后移座椅
+Move Seat Left=左移座椅
+Move Seat Up=升高座椅
+Move Seat Down=降低座椅
+Auto detected=自动检测
+Required=需要
+
+; Chinese stages
+Bayanbulak-Pegasus 2=巴音布鲁克-飞驰人生2
+Longyou 2024 SSS -1 Lap L=龙游 2024 特别赛段 -单圈 左侧发车
+Longyou 2024 SSS -1 Lap R=龙游 2024 特别赛段 -单圈 右侧发车
+Longyou 2024 SSS -2 Laps L=龙游 2024 特别赛段 -双圈 左侧发车
+Longyou 2024 SSS- 2 Laps R=龙游 2024 特别赛段 -双圈 右侧发车
+Nujiang 72 Turns R=怒江七十二拐 反向
+Nujiang 72 Turns=怒江七十二拐
