@@ -16,6 +16,7 @@ x86/
 *.idb
 *.pch
 *.ipch
+*.aps
 
 # Visual Studio
 .vs/
