@@ -1,3 +1,5 @@
+**English** | [中文](README_zh.md)
+
 # RBRi18n
 
 A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)**. It hooks the game's text rendering to load translations and render CJK fonts with proper scaling.
