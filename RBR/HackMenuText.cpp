@@ -15,6 +15,7 @@
 #include "MinHook.h"
 #include "RBRAPI.h"
 #include "IRBRGame.h"
+#include "../Utils/LogUtil.h"
 #include "../Utils/SimpleIni.h"
 #include "../DirectX/D3D9Font/D3DFont.h"
 
@@ -605,6 +606,8 @@ void LoadTranslations()
 
     // Read config from RichardBurnsRally.ini [RBRi18n]
     std::string lang = "zh";
+    
+    InfoLog("RBRi18n: LoadTranslations() called");
     fs::path iniPath = rootPath / "RichardBurnsRally.ini";
     if (fs::exists(iniPath)) {
         CSimpleIniA ini;
@@ -639,4 +642,6 @@ void LoadTranslations()
             LoadTranslationFile(entry.path());
         }
     }
+
+    FormatLog("RBRi18n: Loaded %zu translation keys for language '%s'", g_translations.size(), lang.c_str());
 }
