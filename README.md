@@ -13,6 +13,7 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 - Configurable font family and sizes
 - Resolution-aware font scaling (based on RBR's native 640×480)
 - Widescreen/ultrawide centering support
+- Test capture log: each run creates `RBRi18n/HookRecord_YYYYMMDD_HHMMSS.txt` and records hooked text
 
 ## Installation
 
@@ -27,6 +28,8 @@ Add to `RichardBurnsRally.ini` in your game root:
 ```ini
 [RBRi18n]
 Language=zh
+HookRecordEnabled=1
+HookRecordOnlyUntranslated=0
 
 ; Optional font settings (defaults shown)
 FontFamily=SimHei
@@ -36,6 +39,9 @@ FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
 ```
+
+Set `HookRecordEnabled=0` to disable per-run `HookRecord_*.txt` capture logs.
+Set `HookRecordOnlyUntranslated=1` to record only untranslated (original) hooked text.
 
 ## Translation Files
 

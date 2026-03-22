@@ -13,6 +13,7 @@
 - 可配置的字体系列和大小
 - 分辨率自适应字体缩放（基于 RBR 原生 640×480 分辨率）
 - 支持宽屏/超宽屏居中显示
+- 测试版钩取日志：每次运行会创建 `RBRi18n/HookRecord_YYYYMMDD_HHMMSS.txt`，记录钩取到的文本
 
 ## 安装方法
 
@@ -27,6 +28,8 @@
 ```ini
 [RBRi18n]
 Language=zh
+HookRecordEnabled=1
+HookRecordOnlyUntranslated=0
 
 ; 可选字体设置（显示的是默认值）
 FontFamily=SimHei
@@ -36,6 +39,9 @@ FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
 ```
+
+将 `HookRecordEnabled=0` 可关闭每次运行生成的 `HookRecord_*.txt` 钩取日志。
+将 `HookRecordOnlyUntranslated=1` 可仅记录未翻译（Original）的钩取文本。
 
 ## 翻译文件
 

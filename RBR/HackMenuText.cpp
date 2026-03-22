@@ -4,6 +4,12 @@
 #include <filesystem>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <mutex>
+#include <chrono>
+#include <iomanip>
+#include <sstream>
+#include <unordered_set>
 #include <cstdarg>
 #include <cstdio>
 #include "MinHook.h"
@@ -46,6 +52,8 @@ static int g_fontSizeBig     = 8;
 static int g_fontSizeDebug   = 6;
 static int g_fontSizeHeading = 8;
 static int g_fontSizeMenu    = 8;
+static bool g_hookRecordEnabled = true;
+static bool g_hookRecordOnlyUntranslated = false;
 static IRBRGame::EFonts g_currentFont = IRBRGame::FONT_SMALL;
 
 static IRBRGame* g_pGameInstance = nullptr;
@@ -70,11 +78,117 @@ struct PendingMenuText {
 static std::vector<PendingText> g_pendingTexts;
 static std::vector<PendingMenuText> g_pendingMenuTexts;
 
+static std::ofstream g_hookRecordFile;
+static std::mutex g_hookRecordMutex;
+static std::unordered_set<std::string> g_hookRecordSeen;
+
 static MenuTextDraw_t g_OriginalMenuTextDraw = nullptr;
 
 // EndScene hook to flush pending Chinese text each frame
 typedef HRESULT(WINAPI* EndScene_t)(IDirect3DDevice9*);
 static EndScene_t g_OriginalEndScene = nullptr;
+
+static std::string CurrentTimestampForFileName()
+{
+    auto now = std::chrono::system_clock::now();
+    std::time_t t = std::chrono::system_clock::to_time_t(now);
+    std::tm tmInfo = {};
+    localtime_s(&tmInfo, &t);
+
+    std::ostringstream oss;
+    oss << std::put_time(&tmInfo, "%Y%m%d_%H%M%S");
+    return oss.str();
+}
+
+static std::string CurrentTimestampForLine()
+{
+    auto now = std::chrono::system_clock::now();
+    std::time_t t = std::chrono::system_clock::to_time_t(now);
+    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % 1000;
+    std::tm tmInfo = {};
+    localtime_s(&tmInfo, &t);
+
+    std::ostringstream oss;
+    oss << std::put_time(&tmInfo, "%Y-%m-%d %H:%M:%S");
+    oss << '.' << std::setfill('0') << std::setw(3) << ms.count();
+    return oss.str();
+}
+
+static std::string EscapeRecordText(const std::string& text)
+{
+    std::string escaped;
+    escaped.reserve(text.size());
+    for (char c : text) {
+        if (c == '\r') {
+            escaped += "\\r";
+        } else if (c == '\n') {
+            escaped += "\\n";
+        } else {
+            escaped.push_back(c);
+        }
+    }
+    return escaped;
+}
+
+static void AppendHookRecord(const char* source, const std::string& originalText, const char* resultTag)
+{
+    if (g_hookRecordOnlyUntranslated) {
+        if (!resultTag || std::string(resultTag) != "Original") {
+            return;
+        }
+    }
+
+    std::lock_guard<std::mutex> lock(g_hookRecordMutex);
+    if (!g_hookRecordFile.is_open()) {
+        return;
+    }
+
+    // Deduplicate: only record each unique text once per session
+    if (g_hookRecordSeen.count(originalText)) {
+        return;
+    }
+    g_hookRecordSeen.insert(originalText);
+
+    g_hookRecordFile
+        << '[' << CurrentTimestampForLine() << "]"
+        << " [" << (source ? source : "Unknown") << "]"
+        << " [" << (resultTag ? resultTag : "Unknown") << "] "
+        << EscapeRecordText(originalText)
+        << std::endl;
+}
+
+static void StartHookRecordFile()
+{
+    if (!g_hookRecordEnabled) {
+        return;
+    }
+
+    std::lock_guard<std::mutex> lock(g_hookRecordMutex);
+    if (g_hookRecordFile.is_open()) {
+        return;
+    }
+
+    fs::path logDir = fs::path(GetRBRRootPath()) / "RBRi18n";
+    fs::create_directories(logDir);
+    fs::path recordFile = logDir / ("HookRecord_" + CurrentTimestampForFileName() + ".txt");
+
+    g_hookRecordFile.open(recordFile.string(), std::ios::out | std::ios::trunc);
+    if (g_hookRecordFile.is_open()) {
+        g_hookRecordFile << "# RBRi18n hook capture log" << std::endl;
+        g_hookRecordFile << "# File created at startup" << std::endl;
+    }
+}
+
+static void StopHookRecordFile()
+{
+    std::lock_guard<std::mutex> lock(g_hookRecordMutex);
+    if (!g_hookRecordFile.is_open()) {
+        return;
+    }
+    g_hookRecordFile.flush();
+    g_hookRecordFile.close();
+    g_hookRecordSeen.clear();
+}
 
 // Normalize INI key/value token:
 // - Trim leading/trailing whitespace
@@ -117,6 +231,7 @@ void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, con
         std::string text(ptxtText);
         auto it = g_translations.find(text);
         if (it != g_translations.end()) {
+            AppendHookRecord("WriteText", text, "Translated");
             // Convert UTF-8 to wide string and queue for drawing at end of frame
             int size = MultiByteToWideChar(CP_UTF8, 0, it->second.c_str(), -1, nullptr, 0);
             if (size > 0) {
@@ -133,6 +248,8 @@ void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, con
                 return; // Do not let original draw English text
             }
         }
+
+        AppendHookRecord("WriteText", text, "Original");
     }
 
     // Call original
@@ -289,6 +406,7 @@ int __cdecl Hook_MenuTextDraw(int* a1, int a2, int a3, char* a4, ...)
     std::wstring textToDraw;
     auto it = g_translations.find(key);
     if (it != g_translations.end()) {
+        AppendHookRecord("MenuTextDraw", key, "Translated");
         int wsize = MultiByteToWideChar(CP_UTF8, 0, it->second.c_str(), -1, nullptr, 0);
         if (wsize > 0) {
             textToDraw.resize(wsize, L'\0');
@@ -296,6 +414,7 @@ int __cdecl Hook_MenuTextDraw(int* a1, int a2, int a3, char* a4, ...)
         }
     }
     if (textToDraw.empty()) {
+        AppendHookRecord("MenuTextDraw", key, "Original");
         textToDraw = wbuf;
     }
 
@@ -326,6 +445,7 @@ void HookIRBRGameWriteText()
     
     hookInstalled = true;
     g_pGameInstance = g_pRBRGame;
+    StartHookRecordFile();
     
     // Create fonts for each IRBRGame font size, scaled by resolution.
     // Base heights are designed for 480px (RBR's native 640x480).
@@ -431,6 +551,7 @@ void UnhookIRBRGameWriteText()
             g_pChineseFonts[i] = nullptr;
         }
     }
+    StopHookRecordFile();
 }
 
 static void LoadTranslationFile(const fs::path& filePath)
@@ -469,6 +590,8 @@ void LoadTranslations()
         if (ini.LoadFile(iniPath.string().c_str()) == SI_OK) {
             const char* val = ini.GetValue("RBRi18n", "Language", "zh");
             if (val && val[0]) lang = NormalizeIniToken(std::string(val));
+            g_hookRecordEnabled = (ini.GetLongValue("RBRi18n", "HookRecordEnabled", 1) != 0);
+            g_hookRecordOnlyUntranslated = (ini.GetLongValue("RBRi18n", "HookRecordOnlyUntranslated", 0) != 0);
 
             // Font config (optional, defaults kept if not set)
             const char* ff = ini.GetValue("RBRi18n", "FontFamily", nullptr);
