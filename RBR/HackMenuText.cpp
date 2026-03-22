@@ -224,12 +224,33 @@ static std::string NormalizeIniToken(const std::string& in)
     return in.substr(start, end - start);
 }
 
+static std::string CanonicalizeTranslationKey(const std::string& in)
+{
+    std::string key = NormalizeIniToken(in);
+    if (key.empty()) {
+        return key;
+    }
+
+    // Normalize full-width colon (U+FF1A, UTF-8: EF BC 9A) to ':'
+    const std::string fullWidthColon = "\xEF\xBC\x9A";
+    size_t pos = 0;
+    while ((pos = key.find(fullWidthColon, pos)) != std::string::npos) {
+        key.replace(pos, fullWidthColon.size(), ":");
+        pos += 1;
+    }
+
+    // Final trim to absorb runtime-side extra trailing spaces (e.g. "Stage Aids: ")
+    key = NormalizeIniToken(key);
+    return key;
+}
+
 // Hook function for IRBRGame::WriteText
 void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, const char* ptxtText)
 {
     if (ptxtText && g_OriginalWriteText) {
         std::string text(ptxtText);
-        auto it = g_translations.find(text);
+        std::string lookupKey = CanonicalizeTranslationKey(text);
+        auto it = g_translations.find(lookupKey);
         if (it != g_translations.end()) {
             AppendHookRecord("WriteText", text, "Translated");
             // Convert UTF-8 to wide string and queue for drawing at end of frame
@@ -402,9 +423,10 @@ int __cdecl Hook_MenuTextDraw(int* a1, int a2, int a3, char* a4, ...)
         return 0;
     }
     std::string key(utf8buf);
+    std::string lookupKey = CanonicalizeTranslationKey(key);
 
     std::wstring textToDraw;
-    auto it = g_translations.find(key);
+    auto it = g_translations.find(lookupKey);
     if (it != g_translations.end()) {
         AppendHookRecord("MenuTextDraw", key, "Translated");
         int wsize = MultiByteToWideChar(CP_UTF8, 0, it->second.c_str(), -1, nullptr, 0);
@@ -571,7 +593,7 @@ static void LoadTranslationFile(const fs::path& filePath)
             std::string normKey = NormalizeIniToken(std::string(key.pItem ? key.pItem : ""));
             std::string normVal = NormalizeIniToken(std::string(value));
             if (!normKey.empty() && !normVal.empty()) {
-                g_translations[normKey] = normVal;
+                g_translations[CanonicalizeTranslationKey(normKey)] = normVal;
             }
         }
     }
