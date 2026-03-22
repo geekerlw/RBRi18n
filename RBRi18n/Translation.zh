@@ -1102,24 +1102,118 @@ Setup(tarmac):=调校（柏油）：
 Start Rally School=开始拉力学校
 Back=后退
 
+Exercise=练习
 Basic Driving=基础驾驶
+Rally School Specifications: In this rally course, Richard will teach you all the basic rally driving skills=拉力学校说明：在本次拉力课程中，理查德将教授你所有基础的拉力驾驶技巧
 Advanced Technique=高级技术
+Rally School Specifications: In this rally course, Richard will teach you advanced driving skills.=拉力学校说明：在本次拉力课程中，理查德将教授你高级驾驶技巧。
 
 Start Up And Basic Controls=启动与基础控制
+Lesson Instructions=课程说明
+Learn the basic of rally driving=学习拉力驾驶的基础
+Time Limit:=时间限制：
+None=无
+Stage Aids：=赛段辅助：
+Yellow rectangle - End lesson=黄色矩形 - 结束课程
+Tyres：=轮胎类型：
+Gravel=砂石
+
+
 Basic Driving and Changing Gear=基础驾驶与换挡
+Practice basic car handling at lower speeds.=在较低车速下练习基本的车辆操控
+90 s - Pass=90 秒 - 通过
+70 s - Perfect=70 秒 - 完美
+
 Brake Test: Gravel=刹车测试：砂石
+Practice controlled braking on gravel=在砂石路面练习可控刹车
+10 s - Pass=10 秒 - 通过
+9 s - Perfect=9 秒 - 完美
+Green cones - Brake=绿色路锥 - 刹车
+
 Road Positioning and Gears=道路位置选择与挡位控制
+Practice basic driving and sound race line positioning.=练习基础驾驶以及合理的赛道线路选择
+30 s - Pass=30 秒 - 通过
+25 s - Perfect=25 秒 - 完美
+Red cones - Brake=红色路锥 - 刹车
+Green cones - Throttle=绿色路锥 - 油门
+Blue cones - Guidance=蓝色路锥 - 引导
+
 Qualification Trial=资格测试
+Take the basic rally school graduation test.=参加基础拉力学校毕业测试
+100 s - Pass=100 秒 - 通过
+90 s - Perfect=90 秒 - 完美
+Red cones - Brake=红色路锥 - 刹车
+Green cones - Throttle=绿色路锥 - 油门
+Blue cones - Guidance=蓝色路锥 - 引导
+
 High Speed Passenger Ride=高速乘坐体验
+Richard Burns shows you how it's really done!=理查德伯恩斯向你展示真正的拉力驾驶方式！
 
 Handbrake Turn: Gravel=手刹转向：砂石路
+Learn the handbrake turn technique on gravel.=学习在砂石路面使用手刹转向技巧
+19 s - Pass=19 秒 - 通过
+17 s - Perfect=17 秒 - 完美
+Green cones - Handbrake corner=绿色路锥 - 手刹弯
+
 Oversteer: Left Foot Braking=转向过度：左脚刹车
+Learn to create oversteer using left-foot braking.=学习使用左脚刹车制造转向过度
+17 s - Pass=17 秒 - 通过
+13 s - Perfect=13 秒 - 完美
+Red brake cones.=红色路锥 - 刹车
+Green throttle cones.=绿色路锥 - 油门
+
 Oversteer: Throttle Control=转向过度：油门控制
+Learn to create oversteer by lifting off the throttle.=学习通过松开油门来制造转向过度
+15 s - Pass=15 秒 - 通过
+12 s - Perfect=12 秒 - 完美
+Red cones - Lift off throttle=红色路锥 - 松开油门
+Green cones - Apply throttle=绿色路锥 - 加油门
+
 Powerslide=动力滑行
+Learn to use the powerslide technique.=学习使用动力滑行技巧
+15 s - Pass=15 秒 - 通过
+13 s - Perfect=13 秒 - 完美
+Blue cones - Initiate the powerslide=蓝色路锥 - 开始动力滑行
+
 Basic Handling: Tarmac=基础操控：柏油路
+Learn to handle a rally car on tamac surface.=学习在柏油路面操控拉力赛车
+Yellow rectangle - End lesson=黄色矩形 - 结束课程
+
 Brake Test: Tarmac=刹车测试：柏油路
+Learn to brake efficiently and safely on tarmac.=学习在柏油路面高效且安全地刹车
+10 s - Pass=10 秒 - 通过
+9 s - Perfect=9 秒 - 完美
+Green cones - Brake=绿色路锥 - 刹车
+
 Handbrake Turn: Tarmac=手刹转向：柏油路
+Learn to apply the handbrake turn technique on tarmac.=学习在柏油路面使用手刹转向技巧
+15 s - Pass=15 秒 - 通过
+13 s - Perfect=13 秒 - 完美
+Green cones - Handbrake corners=绿色路锥 - 手刹弯
+
 Soft Suspension=软悬挂
+Try driving with soft suspension.=尝试使用软悬挂设置进行驾驶
+40 s - Pass=40 秒 - 通过
+35 s - Perfect=35 秒 - 完美
+Car Setup:=车辆设定：
+Default, with very soft suspension.=默认设置，悬挂非常柔软
+
 Hard Suspension=硬悬挂
+Try driving with hard suspension.=尝试使用硬悬挂设置进行驾驶
+40 s - Pass=40 秒 - 通过
+35 s - Perfect=35 秒 - 完美
+Default, with very stiff suspension.=默认设置，悬挂非常坚硬
+Tyes:=轮胎类型：
+
 Scandinavian Flick=斯堪的纳维亚钟摆
+Learn to use the Scandinavian Flick technique.=学习使用斯堪的纳维亚钟摆技巧
+13 s - Pass=13 秒 - 通过
+11 s - Perfect=11 秒 - 完美
+Blue cones - Initiate flick=蓝色路锥 - 开始摆尾
+Green cones - Accelerate=绿色路锥 - 加速
+
 Special Stage Trial=特殊赛段测试
+Put all you have learn to the final test!=将你所学的一切运用到最终测试中！
+84 s - Pass=84 秒 - 通过
+80 s - Perfect=80 秒 - 完美
+Regular Pacenotes=常规路书提示
