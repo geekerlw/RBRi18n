@@ -121,7 +121,6 @@ void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, con
         std::string text(ptxtText);
         auto it = g_translations.find(text);
         if (it != g_translations.end()) {
-            // Convert UTF-8 to wide string and queue for drawing at end of frame
             int size = MultiByteToWideChar(CP_UTF8, 0, it->second.c_str(), -1, nullptr, 0);
             if (size > 0) {
                 std::wstring wideText(size, 0);
@@ -445,11 +444,11 @@ static void LoadTranslationFile(const fs::path& filePath)
 {
     if (!fs::exists(filePath)) return;
 
-    CSimpleIniA simpleIni;
+    CSimpleIniCaseA simpleIni;
     simpleIni.SetUnicode();
     if (simpleIni.LoadFile(filePath.string().c_str()) != SI_OK) return;
 
-    CSimpleIniA::TNamesDepend keys;
+    CSimpleIniCaseA::TNamesDepend keys;
     simpleIni.GetAllKeys("Translations", keys);
 
     for (const auto& key : keys) {
