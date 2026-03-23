@@ -1,6 +1,7 @@
 ﻿#include "HackMenuText.h"
 #include <Windows.h>
 #include <unordered_map>
+#include <unordered_set>
 #include <filesystem>
 #include <string>
 #include <vector>
@@ -11,8 +12,11 @@
 #include "IRBRGame.h"
 #include "../Utils/SimpleIni.h"
 #include "../DirectX/D3D9Font/D3DFont.h"
+#include "../Utils/LogUtil.h"
 
 namespace fs = std::filesystem;
+
+static std::unordered_set<std::string> g_loggedMisses;
 
 typedef void (__thiscall* WriteText_t)(IRBRGame*, float, float, const char*);
 typedef void (__thiscall* SetColor_t)(IRBRGame*, float, float, float, float);
@@ -132,6 +136,8 @@ void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, con
                 g_pendingTexts.push_back(std::move(pt));
                 return; // Do not let original draw English text
             }
+        } else if (!text.empty() && g_loggedMisses.insert(text).second) {
+            FormatLog("[WriteText] Missing translation: %s", text.c_str());
         }
     }
 
@@ -294,6 +300,8 @@ int __cdecl Hook_MenuTextDraw(int* a1, int a2, int a3, char* a4, ...)
             textToDraw.resize(wsize, L'\0');
             MultiByteToWideChar(CP_UTF8, 0, it->second.c_str(), -1, &textToDraw[0], wsize);
         }
+    } else if (!key.empty() && g_loggedMisses.insert(key).second) {
+        FormatLog("[MenuText] Missing translation: %s", key.c_str());
     }
     if (textToDraw.empty()) {
         textToDraw = wbuf;
