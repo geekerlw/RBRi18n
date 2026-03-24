@@ -1,24 +1,31 @@
-[English](README.md) | **中文**
 
-# RBRi18n（中文说明）
+[English](README.md) | **中文** | [Español](README_es.md) | [Português](README_pt.md)
 
-一个轻量级的 **Richard Burns Rally (RBR)** 国际化 (i18n) 插件。它通过钩取游戏的文本渲染功能来加载翻译并以适当的缩放比例渲染 CJK 字体。
+# RBRi18n
+
+一个轻量级的 **Richard Burns Rally (RBR)** 国际化 (i18n) 插件。它通过钩取游戏的文本渲染功能来加载翻译，并以适当的缩放比例渲染 CJK 字体。
 
 ![预览](preview.png)
 
 ## 功能特性
 
 - 通过 `Language=zh|en` 设置支持多语言
-- 按插件划分的翻译文件（`RichardBurnsRally.zh`、`RallySimFans.hu.zh`、`SimRallyCN.zh` 等）
+- 自动更新：游戏启动时自动从 GitHub 获取最新翻译文件
+- 按插件划分的翻译文件（如 `Translation.zh.json` 等）
 - 可配置的字体系列和大小
-- 分辨率自适应字体缩放（基于 RBR 原生 640×480 分辨率）
+- 分辨率自适应字体缩放（基于 RBR 原生 640×480）
 - 支持宽屏/超宽屏居中显示
 
 ## 安装方法
 
 1. 将 `RBRi18n.dll` 复制到 RBR 的 `Plugins` 目录
 2. 在 RBR 根目录创建 `RBRi18n` 文件夹
-3. 将翻译文件（`.zh`、`.en` 等）放入 `RBRi18n` 文件夹
+3. 翻译文件将在首次启动时自动下载
+
+## 快速安装方法
+1. 解压缩RRBi18n-v1.x.x.zip文件会生成的两个文件夹Plugins 和 RBRi18n
+2. 将生成的两个文件夹以及内容直接拖到RBR游戏根目录
+3. 系统会自动合并Plugins文件夹，如果有重复的替换即可
 
 ## 配置说明
 
@@ -39,24 +46,27 @@ FontSizeMenu=8
 
 ## 翻译文件
 
-翻译文件使用 INI 格式，包含 `[Translations]` 节。文件命名格式为 `{来源}.{语言}`：
+翻译文件使用 JSON 格式。文件命名为 `{source}.{lang}.json`：
+如果你对翻译内容有任何异议和改进意见，请Fork这个项目并提交你的校正后JSON文件
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh    # 基础游戏（中文）
-├── RichardBurnsRally.en    # 基础游戏（英文）
-├── RallySimFans.hu.zh      # RSF 插件（中文）
-├── SimRallyCN.zh           # SimRallyCN 插件（中文）
+├── RichardBurnsRally.zh.json  # 基础游戏（中文）
+├── Weather.zh.json            # 天气（中文）
+├── Options.zh.json            # 选项菜单（中文）
+├── TuneCar.zh.json            # 调校菜单（中文）
 └── ...
 ```
 
 翻译文件示例：
 
-```ini
-[Translations]
-Options=选项
-Quick Rally=快速拉力赛
+```json
+{
+	"Options": "选项",
+	"Quick Rally": "快速拉力赛"
+}
 ```
+
 
 所有匹配配置语言扩展名的文件都会被加载并合并。
 
