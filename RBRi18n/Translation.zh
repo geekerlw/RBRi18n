@@ -1037,7 +1037,10 @@ Exit to Main Menu?=退出到主菜单？
  All progress will be lost.=将会失去所有进度
 Are you sure you want to restart this exercise?=你确定要重新开始本次训练吗？
 Rally HQ=拉力中心
-Plugins =插件
+"Plugins "=插件
+RICHARD=理查德
+BURNS=伯恩斯
+RALLY=拉力
 
  All record times are subject to a replay check.=所有时间记录应该做回放检查
  Do not delete replay files of record runs.=不要删除有纪录的回放文件
@@ -1288,3 +1291,21 @@ Lotus Exige S RGT=路特斯 Exige S RGT
 " Skoda 130 LR GrpB " =斯柯达 130 LR B组
 " Fiat 124 Abarth Rally RGT " =菲亚特 124 阿巴斯 Rally RGT
 " Lotus Exige S RGT " =路特斯 Exige S RGT
+
+;RBR Leftover part1
+" X Axis"="X轴"
+" Gear Up (Secondary)"="升档（备用）"
+" Gear Down (Secondary)"="降档（备用）"
+" Throttle (Inverted)"="油门（反向）"
+" Y Axis"="Y轴"
+" Brake (Inverted)"="刹车（反向）"
+" Clutch (Inverted)"="离合（反向）"
+" Input Device"="输入设备"
+" There are several different ways of steering the"="车辆转向有多种不同方式"
+" car. Each control type has it's own filter"="每种控制类型都有自己的滤波"
+" settings. Choose the one you want to change."="设置。请选择你想要修改的类型。"
+" A higher curvature setting will make the controller less sensitive to small inputs."="更高的曲率设置会使控制器对小幅输入不那么敏感。"
+" With some controllers maximum input can be applied instantaneously, resulting in jerky"="某些控制器的最大输入可以瞬间施加，从而导致生硬的"
+" movement. This can be prevented by filtering the input response."="动作。可以通过对输入响应进行滤波来避免这种情况。"
+" Rise Rate determines how quickly an input is allowed to build up."="上升速率决定输入增加的速度。"
+" Fall Rate determines how quickly an input is allowed to decrease."="下降速率决定输入减小的速度。"
