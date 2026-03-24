@@ -34,3 +34,6 @@ ipch/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local AI work log
+project_log.md
