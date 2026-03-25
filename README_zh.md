@@ -1,5 +1,5 @@
 
-[English](README.md) | **中文** | [Español](README_es.md) | [Português](README_pt.md)
+[English](README.md) | **中文** | [Português](README_pt.md)
 
 # RBRi18n
 
