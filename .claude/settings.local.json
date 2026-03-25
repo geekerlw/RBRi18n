@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py --version)",
+      "Bash(py -m pip install opencc-python-reimplemented)"
+    ]
+  }
+}
