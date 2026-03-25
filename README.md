@@ -1,4 +1,4 @@
-**English** | [中文](README_zh.md)
+**English** | [中文](README_zh.md) | [Español](README_es.md) | [Português](README_pt.md)
 
 # RBRi18n
 
@@ -21,9 +21,15 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 2. Create a `RBRi18n` folder in your RBR root directory
 3. Translation files are downloaded automatically on first launch
 
+## Quick Installation
+
+1. Extract the RRBi18n-v1.x.x.zip file archive to get two folders: Plugins and RBRi18n
+2. Drag both folders and their contents directly into your RBR game root directory
+3. The system will automatically merge the Plugins folder; overwrite any files if prompted
+
 ## Configuration
 
-Add to `RichardBurnsRally.ini` in your game root:
+The default language is Chinese. To configure a different language, add to `RichardBurnsRally.ini` in your game root:
 
 ```ini
 [RBRi18n]
@@ -40,7 +46,9 @@ FontSizeMenu=8
 
 ## Translation Files
 
+
 Translation files use JSON format. Files are named `{source}.{lang}.json`:
+If you have suggestions or corrections for the translations, please fork this project and submit your revised JSON file.
 
 ```
 RBRi18n/
@@ -58,9 +66,8 @@ Example translation file:
   "Options": "选项",
   "Quick Rally": "快速拉力赛"
 }
-```
 
-All files matching `*.{lang}.json` are loaded and merged.
+All files matching the configured language extension will be loaded and merged.
 
 ## Build from Source
 
