@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README_zh.md) | [Español](README_es.md) | **Português**
+[English](README.md) | [中文](README_zh.md) | **Português**
 
 # RBRi18n
 
