@@ -138,6 +138,18 @@ static DWORD ParseHexColor(const char* str, DWORD defaultVal)
     return static_cast<DWORD>(val);
 }
 
+// Get font scale factor compensated for Windows DPI scaling
+static float GetFontScale()
+{
+    float scale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+    HDC hdc = GetDC(nullptr);
+    if (hdc) {
+        scale /= (GetDeviceCaps(hdc, LOGPIXELSY) / 96.0f);
+        ReleaseDC(nullptr, hdc);
+    }
+    return scale;
+}
+
 // Hook function for IRBRGame::WriteText
 void __fastcall Hook_WriteText(IRBRGame* pThis, void* edx, float x, float y, const char* ptxtText)
 {
@@ -376,7 +388,7 @@ void HookIRBRGameWriteText()
             g_fontSizeHeading
         };
 
-        float fontScale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+        float fontScale = GetFontScale();
 
         for (int i = IRBRGame::FONT_SMALL; i <= IRBRGame::FONT_HEADING; ++i) {
             if (!g_pChineseFonts[i]) {
@@ -418,7 +430,7 @@ void HookIRBRGameWriteText()
 
     // Dedicated font for sub_4728F0 menu text, scaled by resolution
     if (g_pRBRIDirect3DDevice9 && !g_pMenuTextFont) {
-        float fontScale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+        float fontScale = GetFontScale();
         int scaledMenuHeight = max(8, static_cast<int>(g_fontSizeMenu * fontScale + 0.5f));
         g_pMenuTextFont = new CD3DFont(g_fontFamily.c_str(), scaledMenuHeight, 0L);
         g_pMenuTextFont->InitDeviceObjects(g_pRBRIDirect3DDevice9);
