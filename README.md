@@ -11,7 +11,7 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 - Multi-language support via `Language=zh|en` setting
 - Auto-update: fetches latest translation files from GitHub on game launch
 - Per-plugin translation files (`Translation.zh.json`, etc.)
-- Configurable font family and sizes
+- Configurable font family, sizes, and menu colors
 - Resolution-aware font scaling (based on RBR's native 640×480)
 - Widescreen/ultrawide centering support
 
@@ -42,6 +42,13 @@ FontSizeBig=8
 FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
+
+; Optional menu colors (hex AARRGGBB or RRGGBB, defaults shown)
+ColorBackground=FF323232
+ColorSelection=FFFF0000
+ColorIcon=FFC8C8C8
+ColorText=FFFFFFFF
+ColorHeading=FFFFFFFF
 ```
 
 ## Translation Files
