@@ -68,6 +68,7 @@ Example translation file:
   "Options": "选项",
   "Quick Rally": "快速拉力赛"
 }
+```
 
 All files matching the configured language extension will be loaded and merged.
 
