@@ -4,6 +4,7 @@
 #include <chrono>
 #include <iomanip>
 #include <sstream>
+#include <mutex>
 #include "LogUtil.h"
 
 namespace LogUtil {
@@ -12,6 +13,7 @@ using std::wstring;
 using std::string;
 
 std::wofstream output;
+static std::mutex g_logMutex;
 
 static std::wstring ToWide(const std::string& s)
 {
@@ -44,6 +46,7 @@ void SetLogFile(const char* file)
 
 void ToFile(const wstring& message)
 {
+    std::lock_guard<std::mutex> lock(g_logMutex);
     if (!output.is_open()) return;
     output << L"[" << ToWide(GetTimestamp()) << L"] " << message << std::endl;
     output.flush();

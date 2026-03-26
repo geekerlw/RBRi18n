@@ -63,6 +63,13 @@ static IRBRGame::EFonts g_currentFont = IRBRGame::FONT_SMALL;
 static IRBRGame* g_pGameInstance = nullptr;
 static DWORD g_dwCurrentColor = D3DCOLOR_ARGB(255, 255, 255, 255); // Default white
 
+// Menu color config (read from INI, defaults match original hardcoded values)
+static DWORD g_menuColorBkground  = D3DCOLOR_ARGB(255, 50, 50, 50);
+static DWORD g_menuColorSelection = D3DCOLOR_ARGB(255, 255, 0, 0);
+static DWORD g_menuColorIcon      = D3DCOLOR_ARGB(255, 200, 200, 200);
+static DWORD g_menuColorText      = D3DCOLOR_ARGB(255, 255, 255, 255);
+static DWORD g_menuColorHeading   = D3DCOLOR_ARGB(255, 255, 255, 255);
+
 struct PendingText {
     float x;
     float y;
@@ -120,6 +127,27 @@ static std::string NormalizeIniToken(const std::string& in)
     }
 
     return in.substr(start, end - start);
+}
+
+// Parse hex color string "AARRGGBB" or "RRGGBB" to DWORD
+static DWORD ParseHexColor(const char* str, DWORD defaultVal)
+{
+    if (!str || !str[0]) return defaultVal;
+    unsigned long val = strtoul(str, nullptr, 16);
+    if (strlen(str) <= 6) val |= 0xFF000000;  // no alpha = fully opaque
+    return static_cast<DWORD>(val);
+}
+
+// Get font scale factor compensated for Windows DPI scaling
+static float GetFontScale()
+{
+    float scale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+    HDC hdc = GetDC(nullptr);
+    if (hdc) {
+        scale /= (GetDeviceCaps(hdc, LOGPIXELSY) / 96.0f);
+        ReleaseDC(nullptr, hdc);
+    }
+    return scale;
 }
 
 // Hook function for IRBRGame::WriteText
@@ -181,19 +209,19 @@ void __fastcall Hook_SetMenuColor(IRBRGame* pThis, void* edx, int eColor)
     // You can tweak these values to better match RBR's originals.
     switch (eColor) {
         case IRBRGame::MENU_BKGROUND:
-            g_dwCurrentColor = D3DCOLOR_ARGB(255, 50, 50, 50);
+            g_dwCurrentColor = g_menuColorBkground;
             break;
         case IRBRGame::MENU_SELECTION:
-            g_dwCurrentColor = D3DCOLOR_ARGB(255, 255, 0, 0);       // red
+            g_dwCurrentColor = g_menuColorSelection;
             break;
         case IRBRGame::MENU_ICON:
-            g_dwCurrentColor = D3DCOLOR_ARGB(255, 200, 200, 200);   // light gray
+            g_dwCurrentColor = g_menuColorIcon;
             break;
         case IRBRGame::MENU_TEXT:
-            g_dwCurrentColor = D3DCOLOR_ARGB(255, 255, 255, 255);   // white
+            g_dwCurrentColor = g_menuColorText;
             break;
         case IRBRGame::MENU_HEADING:
-            g_dwCurrentColor = D3DCOLOR_ARGB(255, 255, 255, 255);   // white
+            g_dwCurrentColor = g_menuColorHeading;
             break;
         default:
             // Fallback: leave as-is (usually whatever SetColor last set)
@@ -360,7 +388,7 @@ void HookIRBRGameWriteText()
             g_fontSizeHeading
         };
 
-        float fontScale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+        float fontScale = GetFontScale();
 
         for (int i = IRBRGame::FONT_SMALL; i <= IRBRGame::FONT_HEADING; ++i) {
             if (!g_pChineseFonts[i]) {
@@ -402,7 +430,7 @@ void HookIRBRGameWriteText()
 
     // Dedicated font for sub_4728F0 menu text, scaled by resolution
     if (g_pRBRIDirect3DDevice9 && !g_pMenuTextFont) {
-        float fontScale = static_cast<float>(g_rectRBRWndClient.bottom) / 480.0f;
+        float fontScale = GetFontScale();
         int scaledMenuHeight = max(8, static_cast<int>(g_fontSizeMenu * fontScale + 0.5f));
         g_pMenuTextFont = new CD3DFont(g_fontFamily.c_str(), scaledMenuHeight, 0L);
         g_pMenuTextFont->InitDeviceObjects(g_pRBRIDirect3DDevice9);
@@ -592,6 +620,13 @@ void LoadTranslations()
             g_fontSizeDebug   = static_cast<int>(ini.GetLongValue("RBRi18n", "FontSizeDebug",   g_fontSizeDebug));
             g_fontSizeHeading = static_cast<int>(ini.GetLongValue("RBRi18n", "FontSizeHeading", g_fontSizeHeading));
             g_fontSizeMenu    = static_cast<int>(ini.GetLongValue("RBRi18n", "FontSizeMenu",    g_fontSizeMenu));
+
+            // Menu color config (hex AARRGGBB or RRGGBB)
+            g_menuColorBkground  = ParseHexColor(ini.GetValue("RBRi18n", "ColorBackground", nullptr), g_menuColorBkground);
+            g_menuColorSelection = ParseHexColor(ini.GetValue("RBRi18n", "ColorSelection",  nullptr), g_menuColorSelection);
+            g_menuColorIcon      = ParseHexColor(ini.GetValue("RBRi18n", "ColorIcon",       nullptr), g_menuColorIcon);
+            g_menuColorText      = ParseHexColor(ini.GetValue("RBRi18n", "ColorText",       nullptr), g_menuColorText);
+            g_menuColorHeading   = ParseHexColor(ini.GetValue("RBRi18n", "ColorHeading",    nullptr), g_menuColorHeading);
         }
     }
 

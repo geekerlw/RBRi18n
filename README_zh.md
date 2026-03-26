@@ -1,5 +1,5 @@
 
-[English](README.md) | **中文** | [Português](README_pt.md)
+[English](README.md) | **中文** | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md)
 
 # RBRi18n
 
@@ -43,6 +43,13 @@ FontSizeBig=8
 FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
+
+; 可选菜单颜色（十六进制 AARRGGBB 或 RRGGBB，显示的是默认值）
+ColorBackground=FF323232
+ColorSelection=FFFF0000
+ColorIcon=FFC8C8C8
+ColorText=FFFFFFFF
+ColorHeading=FFFFFFFF
 ```
 
 ## 翻译文件

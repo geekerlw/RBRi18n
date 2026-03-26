@@ -1,4 +1,6 @@
-[English](README.md) | [中文](README_zh.md) | **Português**
+
+[English](README.md) | **中文** | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md)
+
 
 # RBRi18n
 
@@ -42,6 +44,13 @@ FontSizeBig=8
 FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
+
+; Cores de menu opcionais (hex AARRGGBB ou RRGGBB, valores padrão exibidos)
+ColorBackground=FF323232
+ColorSelection=FFFF0000
+ColorIcon=FFC8C8C8
+ColorText=FFFFFFFF
+ColorHeading=FFFFFFFF
 ```
 
 ## Arquivos de Tradução

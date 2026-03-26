@@ -1,4 +1,6 @@
-**English** | [中文](README_zh.md) | [Português](README_pt.md)
+
+[English](README.md) | **中文** | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md)
+
 
 # RBRi18n
 
@@ -11,7 +13,7 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 - Multi-language support via `Language=zh|en` setting
 - Auto-update: fetches latest translation files from GitHub on game launch
 - Per-plugin translation files (`Translation.zh.json`, etc.)
-- Configurable font family and sizes
+- Configurable font family, sizes, and menu colors
 - Resolution-aware font scaling (based on RBR's native 640×480)
 - Widescreen/ultrawide centering support
 
@@ -42,6 +44,13 @@ FontSizeBig=8
 FontSizeDebug=6
 FontSizeHeading=8
 FontSizeMenu=8
+
+; Optional menu colors (hex AARRGGBB or RRGGBB, defaults shown)
+ColorBackground=FF323232
+ColorSelection=FFFF0000
+ColorIcon=FFC8C8C8
+ColorText=FFFFFFFF
+ColorHeading=FFFFFFFF
 ```
 
 ## Translation Files
@@ -66,6 +75,7 @@ Example translation file:
   "Options": "选项",
   "Quick Rally": "快速拉力赛"
 }
+```
 
 All files matching the configured language extension will be loaded and merged.
 
