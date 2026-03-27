@@ -36,7 +36,7 @@
 Language=jp
 
 ; オプションのフォント設定（デフォルト値を表示）
-FontFamily=Arial Unicode MS
+FontFamily=SimHei
 FontSizeSmall=7
 FontSizeBig=8
 FontSizeDebug=6
