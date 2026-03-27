@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import json; zh=json.load\\(open\\(''Translation.zh.json'',''r'',encoding=''utf-8''\\)\\); hant=json.load\\(open\\(''Translation.zh-Hant.json'',''r'',encoding=''utf-8''\\)\\); print\\(f''zh: {len\\(zh\\)} keys, zh-Hant: {len\\(hant\\)} keys''\\); missing=[k for k in zh if k not in hant]; print\\(f''Missing in zh-Hant: {len\\(missing\\)} keys''\\)\")",
+      "Bash(where python3:*)",
+      "Bash(where py:*)"
+    ]
+  }
+}
