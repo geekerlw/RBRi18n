@@ -1,5 +1,5 @@
 
-[English](README.md) | **中文** | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md)
+[English](README.md) | **中文** | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md) | [Magyar](README_hu.md)
 
 # RBRi18n
 
@@ -50,6 +50,10 @@ ColorSelection=FFFF0000
 ColorIcon=FFC8C8C8
 ColorText=FFFFFFFF
 ColorHeading=FFFFFFFF
+
+; 禁用特定翻译类别（逗号分隔）
+; 可用：cars, stages, menu, options, tuning, rally, weather, tutorial, dailystages, misc
+;DisableCategories=tutorial,dailystages
 ```
 
 ## 翻译文件

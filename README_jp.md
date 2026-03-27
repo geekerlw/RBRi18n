@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | **日本語**
+[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | **日本語** | [Magyar](README_hu.md)
 
 # RBRi18n
 
@@ -36,7 +36,7 @@
 Language=jp
 
 ; オプションのフォント設定（デフォルト値を表示）
-FontFamily=SimHei
+FontFamily=Arial Unicode MS
 FontSizeSmall=7
 FontSizeBig=8
 FontSizeDebug=6
@@ -49,6 +49,10 @@ ColorSelection=FFFF0000
 ColorIcon=FFC8C8C8
 ColorText=FFFFFFFF
 ColorHeading=FFFFFFFF
+
+; 特定の翻訳カテゴリを無効にする（カンマ区切り）
+; 利用可能：cars, stages, menu, options, tuning, rally, weather, tutorial, dailystages, misc
+;DisableCategories=tutorial,dailystages
 ```
 
 ## 翻訳ファイル

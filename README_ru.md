@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | **Русский** | [日本語](README_jp.md)
+[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | **Русский** | [日本語](README_jp.md) | [Magyar](README_hu.md)
 
 # RBRi18n
 
@@ -36,7 +36,7 @@
 Language=ru
 
 ; Необязательные настройки шрифта (показаны значения по умолчанию)
-FontFamily=SimHei
+FontFamily=Arial Unicode MS
 FontSizeSmall=7
 FontSizeBig=8
 FontSizeDebug=6
@@ -49,6 +49,10 @@ ColorSelection=FFFF0000
 ColorIcon=FFC8C8C8
 ColorText=FFFFFFFF
 ColorHeading=FFFFFFFF
+
+; Отключить определённые категории перевода (через запятую)
+; Доступные: cars, stages, menu, options, tuning, rally, weather, tutorial, dailystages, misc
+;DisableCategories=tutorial,dailystages
 ```
 
 ## Файлы перевода

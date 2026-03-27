@@ -45,6 +45,7 @@ static void* g_SetColorAddr      = nullptr;
 
 static std::unordered_map<std::string, std::string> g_translations;
 static std::mutex g_translationsMutex;
+static std::unordered_set<std::string> g_disabledCategories;
 
 // One Chinese font per IRBRGame::EFonts value
 static CD3DFont* g_pChineseFonts[IRBRGame::FONT_HEADING + 1] = { nullptr, nullptr, nullptr, nullptr };
@@ -494,9 +495,18 @@ static void LoadTranslationFile(const fs::path& filePath)
     try {
         json j = json::parse(ifs);
         std::lock_guard<std::mutex> lock(g_translationsMutex);
-        for (auto& [key, val] : j.items()) {
-            if (val.is_string() && !key.empty()) {
-                g_translations[key] = val.get<std::string>();
+        for (auto& [category, content] : j.items()) {
+            if (content.is_object()) {
+                // Categorized format: {"category": {"key": "value", ...}}
+                if (g_disabledCategories.count(category)) continue;
+                for (auto& [key, val] : content.items()) {
+                    if (val.is_string() && !key.empty()) {
+                        g_translations[key] = val.get<std::string>();
+                    }
+                }
+            } else if (content.is_string() && !category.empty()) {
+                // Legacy flat format: {"key": "value", ...}
+                g_translations[category] = content.get<std::string>();
             }
         }
     } catch (const json::exception& e) {
@@ -627,6 +637,20 @@ void LoadTranslations()
             g_menuColorIcon      = ParseHexColor(ini.GetValue("RBRi18n", "ColorIcon",       nullptr), g_menuColorIcon);
             g_menuColorText      = ParseHexColor(ini.GetValue("RBRi18n", "ColorText",       nullptr), g_menuColorText);
             g_menuColorHeading   = ParseHexColor(ini.GetValue("RBRi18n", "ColorHeading",    nullptr), g_menuColorHeading);
+
+            // Disabled translation categories (comma-separated)
+            const char* dc = ini.GetValue("RBRi18n", "DisableCategories", nullptr);
+            if (dc && dc[0]) {
+                std::string s(dc);
+                size_t pos = 0;
+                while (pos < s.size()) {
+                    size_t comma = s.find(',', pos);
+                    if (comma == std::string::npos) comma = s.size();
+                    std::string cat = NormalizeIniToken(s.substr(pos, comma - pos));
+                    if (!cat.empty()) g_disabledCategories.insert(cat);
+                    pos = comma + 1;
+                }
+            }
         }
     }
 
