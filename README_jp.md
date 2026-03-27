@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | **日本語**
+[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | **日本語** | [Magyar](README_hu.md)
 
 # RBRi18n
 
@@ -36,7 +36,7 @@
 Language=jp
 
 ; オプションのフォント設定（デフォルト値を表示）
-FontFamily=SimHei
+FontFamily=Arial Unicode MS
 FontSizeSmall=7
 FontSizeBig=8
 FontSizeDebug=6

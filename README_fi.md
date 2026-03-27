@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | **Suomi** | [Русский](README_ru.md) | [日本語](README_jp.md)
+[English](README.md) | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | **Suomi** | [Русский](README_ru.md) | [日本語](README_jp.md) | [Magyar](README_hu.md)
 
 # RBRi18n
 
@@ -36,7 +36,7 @@ Oletuskieli on kiina. Määrittääksesi toisen kielen, lisää seuraava `Richar
 Language=fi
 
 ; Valinnaiset fonttiasetukset (oletusarvot näytetty)
-FontFamily=SimHei
+FontFamily=Arial Unicode MS
 FontSizeSmall=7
 FontSizeBig=8
 FontSizeDebug=6
