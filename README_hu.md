@@ -23,9 +23,13 @@ Egy könnyűsúlyú nemzetköziesítési (i18n) bővítmény a **Richard Burns R
 
 ## Gyorstelepítés
 
-1. Csomagold ki az `RRBi18n-v1.x.x.zip` fájlt, amely két mappát tartalmaz: `Plugins` és `RBRi18n`
-2. Húzd mindkét mappát és tartalmukat közvetlenül az RBR játék gyökérkönyvtárába
-3. A rendszer automatikusan egyesíti a `Plugins` mappát; ha kéri, írd felül a fájlokat
+1. Töltsd le a legújabb zip fájlt (a Releases oldalról)
+![Letöltési hivatkozás](downloadIntro1.png)   
+![Letöltési oldal](downloadIntro2.png)   
+2. Csomagold ki az `RRBi18n-v1.x.x.zip` fájlt, amely két mappát tartalmaz: `Plugins` és `RBRi18n`
+![Kicsomagolt eredmény](downloadIntro3.png)   
+3. Húzd mindkét mappát és tartalmukat közvetlenül az RBR játék gyökérkönyvtárába
+4. A rendszer automatikusan egyesíti a `Plugins` mappát; ha kéri, írd felül a fájlokat
 
 ## Beállítás
 

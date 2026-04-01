@@ -23,9 +23,13 @@
 3. 翻译文件将在首次启动时自动下载
 
 ## 快速安装方法
-1. 解压缩RRBi18n-v1.x.x.zip文件会生成的两个文件夹Plugins 和 RBRi18n
-2. 将生成的两个文件夹以及内容直接拖到RBR游戏根目录
-3. 系统会自动合并Plugins文件夹，如果有重复的替换即可
+1. 下载安装最新的zip文件（从Release）
+![下载入口](downloadIntro1.png)   
+![下载页面](downloadIntro2.png)   
+2. 解压缩RRBi18n-v1.x.x.zip文件会生成的两个文件夹Plugins 和 RBRi18n
+![解压结果](downloadIntro3.png)   
+3. 将生成的两个文件夹以及内容直接拖到RBR游戏根目录
+4. 系统会自动合并Plugins文件夹，如果有重复的替换即可
 
 ## 配置说明
 
