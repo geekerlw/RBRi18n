@@ -29,7 +29,9 @@ Kevyt kansainvälistämis- (i18n) lisäosa **Richard Burns Rallyyn (RBR)**. Se k
 2. Pura `RRBi18n-v1.x.x.zip`-arkisto saadaksesi kaksi kansiota: `Plugins` ja `RBRi18n`
 ![Purettu tulos](downloadIntro3.png)   
 3. Vedä molemmat kansiot sisältöineen suoraan RBR-pelin juurihakemistoon
+![Vedä tiedostot](downloadIntro4.png)   
 4. Järjestelmä yhdistää automaattisesti `Plugins`-kansion; korvaa tiedostot pyydettäessä
+![Korvaa](downloadIntro5.png) 
 
 ## Määritykset
 

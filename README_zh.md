@@ -29,7 +29,9 @@
 2. 解压缩RRBi18n-v1.x.x.zip文件会生成的两个文件夹Plugins 和 RBRi18n
 ![解压结果](downloadIntro3.png)   
 3. 将生成的两个文件夹以及内容直接拖到RBR游戏根目录
+![拖拽文件](downloadIntro4.png) 
 4. 系统会自动合并Plugins文件夹，如果有重复的替换即可
+![替换](downloadIntro5.png) 
 
 ## 配置说明
 

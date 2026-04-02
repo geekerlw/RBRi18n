@@ -29,7 +29,9 @@
 2. `RRBi18n-v1.x.x.zip` ファイルを解凍して、`Plugins` と `RBRi18n` の2つのフォルダを取得
 ![解凍結果](downloadIntro3.png)   
 3. 両方のフォルダとその中身を RBR ゲームのルートディレクトリに直接ドラッグ
+![ファイルをドラッグ](downloadIntro4.png)   
 4. システムが自動的に `Plugins` フォルダを統合します。ファイルの上書きを求められた場合は上書きしてください
+![上書き](downloadIntro5.png) 
 
 ## 設定
 

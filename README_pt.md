@@ -31,7 +31,9 @@ Um plugin leve de internacionalização (i18n) para **Richard Burns Rally (RBR)*
 2. Extraia o arquivo `RRBi18n-v1.x.x.zip` para obter duas pastas: `Plugins` e `RBRi18n`
 ![Resultado da extração](downloadIntro3.png)   
 3. Arraste ambas as pastas e seus conteúdos diretamente para o diretório raiz do jogo RBR
+![Arrastar arquivos](downloadIntro4.png)   
 4. O sistema mesclará automaticamente a pasta `Plugins`; substitua os arquivos se solicitado
+![Substituir](downloadIntro5.png) 
 
 ## Configuração
 
