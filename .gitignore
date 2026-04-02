@@ -1,0 +1,51 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.lib
+!ThirdParty/**/*.lib
+*.exp
+*.log
+*.tlog
+*.idb
+*.pch
+*.ipch
+*.aps
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# Build directories
+[Bb]in/
+[Oo]bj/
+ipch/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local AI / editor config (never commit)
+.claude/
+project_log.md
+RBR_Installation.md
+
+# Not ready features
+Stages.json
+settings.local.json
+
+# Temporary test files
+Translation.zh_test.json
+
+# Local translator scripts (not for PR)
+Utils/translate/
