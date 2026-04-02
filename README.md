@@ -71,10 +71,13 @@ If you have suggestions or corrections for the translations, please fork this pr
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Base game (Chinese)
-├── Weather.zh.json            # Weather translations (Chinese)
-├── Options.zh.json            # Options menu (Chinese)
-├── TuneCar.zh.json            # Car tuning (Chinese)
+├── Translation.zh.json        # Chinese (Simplified)
+├── Translation.zh-Hant.json   # Chinese (Traditional)
+├── Translation.pt.json        # Portuguese
+├── Translation.fi.json        # Finnish
+├── Translation.ru.json        # Russian
+├── Translation.jp.json        # Japanese
+├── Translation.hu.json        # Hungarian
 └── ...
 ```
 

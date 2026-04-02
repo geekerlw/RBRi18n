@@ -68,10 +68,13 @@ ColorHeading=FFFFFFFF
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # ベースゲーム（中国語）
-├── Weather.zh.json            # 天気の翻訳（中国語）
-├── Options.zh.json            # オプションメニュー（中国語）
-├── TuneCar.zh.json            # 車のチューニング（中国語）
+├── Translation.zh.json        # 中国語（簡体字）
+├── Translation.zh-Hant.json   # 中国語（繁体字）
+├── Translation.pt.json        # ポルトガル語
+├── Translation.fi.json        # フィンランド語
+├── Translation.ru.json        # ロシア語
+├── Translation.jp.json        # 日本語
+├── Translation.hu.json        # ハンガリー語
 └── ...
 ```
 

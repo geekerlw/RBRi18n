@@ -57,10 +57,13 @@ Ha javaslataid vagy javításaid vannak a fordításokhoz, kérjük, forkold ezt
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Alapjáték (kínai)
-├── Weather.zh.json            # Időjárás fordítások (kínai)
-├── Options.zh.json            # Beállítások menü (kínai)
-├── TuneCar.zh.json            # Autóhangolás (kínai)
+├── Translation.zh.json        # Kínai (egyszerűsített)
+├── Translation.zh-Hant.json   # Kínai (hagyományos)
+├── Translation.pt.json        # Portugál
+├── Translation.fi.json        # Finn
+├── Translation.ru.json        # Orosz
+├── Translation.jp.json        # Japán
+├── Translation.hu.json        # Magyar
 └── ...
 ```
 

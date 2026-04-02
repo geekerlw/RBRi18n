@@ -68,10 +68,13 @@ Jos sinulla on ehdotuksia tai korjauksia käännöksiin, forkkaa tämä projekti
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Peruspeli (kiina)
-├── Weather.zh.json            # Sääkäännökset (kiina)
-├── Options.zh.json            # Asetusvalikko (kiina)
-├── TuneCar.zh.json            # Auton säätö (kiina)
+├── Translation.zh.json        # Yksinkertaistettu kiina
+├── Translation.zh-Hant.json   # Perinteinen kiina
+├── Translation.pt.json        # Portugali
+├── Translation.fi.json        # Suomi
+├── Translation.ru.json        # Venäjä
+├── Translation.jp.json        # Japani
+├── Translation.hu.json        # Unkari
 └── ...
 ```
 
