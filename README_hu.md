@@ -23,9 +23,15 @@ Egy könnyűsúlyú nemzetköziesítési (i18n) bővítmény a **Richard Burns R
 
 ## Gyorstelepítés
 
-1. Csomagold ki az `RRBi18n-v1.x.x.zip` fájlt, amely két mappát tartalmaz: `Plugins` és `RBRi18n`
-2. Húzd mindkét mappát és tartalmukat közvetlenül az RBR játék gyökérkönyvtárába
-3. A rendszer automatikusan egyesíti a `Plugins` mappát; ha kéri, írd felül a fájlokat
+1. Töltsd le a legújabb zip fájlt (a Releases oldalról)
+![Letöltési hivatkozás](downloadIntro1.png)   
+![Letöltési oldal](downloadIntro2.png)   
+2. Csomagold ki az `RRBi18n-v1.x.x.zip` fájlt, amely két mappát tartalmaz: `Plugins` és `RBRi18n`
+![Kicsomagolt eredmény](downloadIntro3.png)   
+3. Húzd mindkét mappát és tartalmukat közvetlenül az RBR játék gyökérkönyvtárába
+![Fájlok húzása](downloadIntro4.png)   
+4. A rendszer automatikusan egyesíti a `Plugins` mappát; ha kéri, írd felül a fájlokat
+![Felülírás](downloadIntro5.png) 
 
 ## Beállítás
 
@@ -51,10 +57,13 @@ Ha javaslataid vagy javításaid vannak a fordításokhoz, kérjük, forkold ezt
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Alapjáték (kínai)
-├── Weather.zh.json            # Időjárás fordítások (kínai)
-├── Options.zh.json            # Beállítások menü (kínai)
-├── TuneCar.zh.json            # Autóhangolás (kínai)
+├── Translation.zh.json        # Kínai (egyszerűsített)
+├── Translation.zh-Hant.json   # Kínai (hagyományos)
+├── Translation.pt.json        # Portugál
+├── Translation.fi.json        # Finn
+├── Translation.ru.json        # Orosz
+├── Translation.jp.json        # Japán
+├── Translation.hu.json        # Magyar
 └── ...
 ```
 

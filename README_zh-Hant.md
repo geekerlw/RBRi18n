@@ -23,9 +23,15 @@
 
 ## 快速安裝方法
 
-1. 解壓縮 RRBi18n-v1.x.x.zip 檔案會產生兩個資料夾：Plugins 和 RBRi18n
-2. 將產生的兩個資料夾及其內容直接拖曳到 RBR 遊戲根目錄
-3. 系統會自動合併 Plugins 資料夾，如有重複檔案直接替換即可
+1. 下載最新的 zip 檔案（從 Release）
+![下載入口](downloadIntro1.png)   
+![下載頁面](downloadIntro2.png)   
+2. 解壓縮 RRBi18n-v1.x.x.zip 檔案會產生兩個資料夾：Plugins 和 RBRi18n
+![解壓結果](downloadIntro3.png)   
+3. 將產生的兩個資料夾及其內容直接拖曳到 RBR 遊戲根目錄
+![拖曳文件](downloadIntro4.png)   
+4. 系統會自動合併 Plugins 資料夾，如有重複檔案直接替換即可
+![替換](downloadIntro5.png) 
 
 ## 設定說明
 
@@ -62,10 +68,13 @@ ColorHeading=FFFFFFFF
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # 基礎遊戲（中文）
-├── Weather.zh.json            # 天氣（中文）
-├── Options.zh.json            # 選項選單（中文）
-├── TuneCar.zh.json            # 車輛調校（中文）
+├── Translation.zh.json        # 簡體中文
+├── Translation.zh-Hant.json   # 繁體中文
+├── Translation.pt.json        # 葡萄牙語
+├── Translation.fi.json        # 芬蘭語
+├── Translation.ru.json        # 俄語
+├── Translation.jp.json        # 日語
+├── Translation.hu.json        # 匈牙利語
 └── ...
 ```
 

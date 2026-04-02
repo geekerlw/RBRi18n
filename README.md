@@ -25,9 +25,15 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 
 ## Quick Installation
 
-1. Extract the RRBi18n-v1.x.x.zip file archive to get two folders: Plugins and RBRi18n
-2. Drag both folders and their contents directly into your RBR game root directory
-3. The system will automatically merge the Plugins folder; overwrite any files if prompted
+1. Download the latest zip file (from Releases)
+![Download entry](downloadIntro1.png)   
+![Download page](downloadIntro2.png)   
+2. Extract the RRBi18n-v1.x.x.zip file archive to get two folders: Plugins and RBRi18n
+![Extracted result](downloadIntro3.png)   
+3. Drag both folders and their contents directly into your RBR game root directory
+![Drag files](downloadIntro4.png)   
+4. The system will automatically merge the Plugins folder; overwrite any files if prompted
+![Overwrite](downloadIntro5.png) 
 
 ## Configuration
 
@@ -65,10 +71,13 @@ If you have suggestions or corrections for the translations, please fork this pr
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Base game (Chinese)
-├── Weather.zh.json            # Weather translations (Chinese)
-├── Options.zh.json            # Options menu (Chinese)
-├── TuneCar.zh.json            # Car tuning (Chinese)
+├── Translation.zh.json        # Chinese (Simplified)
+├── Translation.zh-Hant.json   # Chinese (Traditional)
+├── Translation.pt.json        # Portuguese
+├── Translation.fi.json        # Finnish
+├── Translation.ru.json        # Russian
+├── Translation.jp.json        # Japanese
+├── Translation.hu.json        # Hungarian
 └── ...
 ```
 

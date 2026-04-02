@@ -23,9 +23,15 @@
 
 ## クイックインストール
 
-1. `RRBi18n-v1.x.x.zip` ファイルを解凍して、`Plugins` と `RBRi18n` の2つのフォルダを取得
-2. 両方のフォルダとその中身を RBR ゲームのルートディレクトリに直接ドラッグ
-3. システムが自動的に `Plugins` フォルダを統合します。ファイルの上書きを求められた場合は上書きしてください
+1. 最新の zip ファイルをダウンロード（Releases から）
+![ダウンロード入口](downloadIntro1.png)   
+![ダウンロードページ](downloadIntro2.png)   
+2. `RRBi18n-v1.x.x.zip` ファイルを解凍して、`Plugins` と `RBRi18n` の2つのフォルダを取得
+![解凍結果](downloadIntro3.png)   
+3. 両方のフォルダとその中身を RBR ゲームのルートディレクトリに直接ドラッグ
+![ファイルをドラッグ](downloadIntro4.png)   
+4. システムが自動的に `Plugins` フォルダを統合します。ファイルの上書きを求められた場合は上書きしてください
+![上書き](downloadIntro5.png) 
 
 ## 設定
 
@@ -62,10 +68,13 @@ ColorHeading=FFFFFFFF
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # ベースゲーム（中国語）
-├── Weather.zh.json            # 天気の翻訳（中国語）
-├── Options.zh.json            # オプションメニュー（中国語）
-├── TuneCar.zh.json            # 車のチューニング（中国語）
+├── Translation.zh.json        # 中国語（簡体字）
+├── Translation.zh-Hant.json   # 中国語（繁体字）
+├── Translation.pt.json        # ポルトガル語
+├── Translation.fi.json        # フィンランド語
+├── Translation.ru.json        # ロシア語
+├── Translation.jp.json        # 日本語
+├── Translation.hu.json        # ハンガリー語
 └── ...
 ```
 

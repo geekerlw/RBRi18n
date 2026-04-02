@@ -25,9 +25,15 @@ Um plugin leve de internacionalização (i18n) para **Richard Burns Rally (RBR)*
 
 ## Instalação Rápida
 
-1. Extraia o arquivo `RRBi18n-v1.x.x.zip` para obter duas pastas: `Plugins` e `RBRi18n`
-2. Arraste ambas as pastas e seus conteúdos diretamente para o diretório raiz do jogo RBR
-3. O sistema mesclará automaticamente a pasta `Plugins`; substitua os arquivos se solicitado
+1. Baixe o arquivo zip mais recente (na aba Releases)
+![Entrada de download](downloadIntro1.png)   
+![Página de download](downloadIntro2.png)   
+2. Extraia o arquivo `RRBi18n-v1.x.x.zip` para obter duas pastas: `Plugins` e `RBRi18n`
+![Resultado da extração](downloadIntro3.png)   
+3. Arraste ambas as pastas e seus conteúdos diretamente para o diretório raiz do jogo RBR
+![Arrastar arquivos](downloadIntro4.png)   
+4. O sistema mesclará automaticamente a pasta `Plugins`; substitua os arquivos se solicitado
+![Substituir](downloadIntro5.png) 
 
 ## Configuração
 
@@ -64,10 +70,13 @@ Se você tiver sugestões ou correções para as traduções, faça um fork dest
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Jogo base (chinês)
-├── Weather.zh.json            # Traduções de clima (chinês)
-├── Options.zh.json            # Menu de opções (chinês)
-├── TuneCar.zh.json            # Ajuste de carro (chinês)
+├── Translation.zh.json        # Chinês Simplificado
+├── Translation.zh-Hant.json   # Chinês Tradicional
+├── Translation.pt.json        # Português
+├── Translation.fi.json        # Finlandês
+├── Translation.ru.json        # Russo
+├── Translation.jp.json        # Japonês
+├── Translation.hu.json        # Húngaro
 └── ...
 ```
 

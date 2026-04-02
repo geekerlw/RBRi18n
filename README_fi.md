@@ -23,9 +23,15 @@ Kevyt kansainvälistämis- (i18n) lisäosa **Richard Burns Rallyyn (RBR)**. Se k
 
 ## Pika-asennus
 
-1. Pura `RRBi18n-v1.x.x.zip`-arkisto saadaksesi kaksi kansiota: `Plugins` ja `RBRi18n`
-2. Vedä molemmat kansiot sisältöineen suoraan RBR-pelin juurihakemistoon
-3. Järjestelmä yhdistää automaattisesti `Plugins`-kansion; korvaa tiedostot pyydettäessä
+1. Lataa uusin zip-tiedosto (Releases-sivulta)
+![Latauslinkki](downloadIntro1.png)   
+![Lataussivu](downloadIntro2.png)   
+2. Pura `RRBi18n-v1.x.x.zip`-arkisto saadaksesi kaksi kansiota: `Plugins` ja `RBRi18n`
+![Purettu tulos](downloadIntro3.png)   
+3. Vedä molemmat kansiot sisältöineen suoraan RBR-pelin juurihakemistoon
+![Vedä tiedostot](downloadIntro4.png)   
+4. Järjestelmä yhdistää automaattisesti `Plugins`-kansion; korvaa tiedostot pyydettäessä
+![Korvaa](downloadIntro5.png) 
 
 ## Määritykset
 
@@ -62,10 +68,13 @@ Jos sinulla on ehdotuksia tai korjauksia käännöksiin, forkkaa tämä projekti
 
 ```
 RBRi18n/
-├── RichardBurnsRally.zh.json  # Peruspeli (kiina)
-├── Weather.zh.json            # Sääkäännökset (kiina)
-├── Options.zh.json            # Asetusvalikko (kiina)
-├── TuneCar.zh.json            # Auton säätö (kiina)
+├── Translation.zh.json        # Yksinkertaistettu kiina
+├── Translation.zh-Hant.json   # Perinteinen kiina
+├── Translation.pt.json        # Portugali
+├── Translation.fi.json        # Suomi
+├── Translation.ru.json        # Venäjä
+├── Translation.jp.json        # Japani
+├── Translation.hu.json        # Unkari
 └── ...
 ```
 
