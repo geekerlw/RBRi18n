@@ -961,6 +961,9 @@
     "[Spain]": "[西班牙]",
     "[Sweden]": "[瑞典]",
     "[Switzerland]": "[瑞士]",
+    "[United Kingd..": "英国",
+    "[United States..": "美国",
+    "[-Test BTB st..": "[-测试BTB赛段-]",
     "[United Kingdom]": "[英国]",
     "[United States of America]": "[美国]",
     "Argentina": "阿根廷",
@@ -1657,7 +1660,7 @@
     "Continue Rally": "继续拉力赛",
     "Championship": "锦标赛",
     "Online Rally": "在线拉力赛",
-    
+
     "Online Rallies": "在线拉力赛",
     "Championships": "锦标赛",
     "Public Rallies": "公开拉力赛",
@@ -1672,6 +1675,13 @@
     "Sort: Default": "排序：默认",
     "Reduced Dmg": "减轻车损",
     "Car Selection": "车辆选择",
+    "Back: return to main menu": "返回：返回主菜单",
+    "Favourite car": "收藏车辆",
+    "Country:": "国家：",
+    "Length:": "长度：",
+    "Surface:": "路面：",
+    "Author:": "作者：",
+
   
 
     "Rally Season": "拉力赛季",
