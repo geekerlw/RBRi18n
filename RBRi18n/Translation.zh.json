@@ -1657,6 +1657,23 @@
     "Continue Rally": "继续拉力赛",
     "Championship": "锦标赛",
     "Online Rally": "在线拉力赛",
+    
+    "Online Rallies": "在线拉力赛",
+    "Championships": "锦标赛",
+    "Public Rallies": "公开拉力赛",
+    "Private Rallies": "私人拉力赛",
+    "Car Filter:": "车辆筛选：",
+    "Daily: one-off randomized daily events": "日赛：每天随机生成的单次赛事",
+    "Champ: rallies that are part of a championship series": "锦标赛：属于锦标赛系列的赛事",
+    "Public: open rallies anyone can join": "公开：任何人均可参与的赛事",
+    "Private: password-protected rallies": "私人：需要密码的赛事",
+    "Continue: resume active in-progress rally": "继续：恢复当前进行中的赛事",
+    "Car Filter: show only rallies compatible with your favourite cars": "车辆筛选：仅显示适用于收藏车辆的赛事",
+    "Sort: Default": "排序：默认",
+    "Reduced Dmg": "减轻车损",
+    "Car Selection": "车辆选择",
+  
+
     "Rally Season": "拉力赛季",
     "Rally School": "拉力学院",
     "Continue Rally Season": "继续拉力赛季",
