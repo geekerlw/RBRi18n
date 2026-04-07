@@ -35,15 +35,16 @@ ipch/
 .DS_Store
 Thumbs.db
 
-# Local AI work log
+# Local AI / editor config (never commit)
+.claude/
 project_log.md
 RBR_Installation.md
 
-# not ready features
+# Not ready features
 Stages.json
 settings.local.json
 
-# Temporary test json file
+# Temporary test files
 Translation.zh_test.json
 
 # Local translator scripts (not for PR)
