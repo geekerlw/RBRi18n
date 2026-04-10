@@ -35,6 +35,11 @@ ipch/
 .DS_Store
 Thumbs.db
 
+# Python virtual environments
+.venv/
+venv/
+env/
+
 # Local AI / editor config (never commit)
 .claude/
 project_log.md
@@ -48,4 +53,5 @@ settings.local.json
 Translation.zh_test.json
 
 # Local translator scripts (not for PR)
-Utils/translate/
+Utils/translate
+Utils/missingData
