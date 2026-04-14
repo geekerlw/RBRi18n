@@ -1135,6 +1135,27 @@
     "Skill Level": "技术水平",
     "Rookie": "菜鸟",
     "Champion": "冠军",
+    "Enter Stage Comment: ": "输入赛段评论：",
+    "Comment after your retirement from rally: ": "退赛后的评论：",
+    "You have been disqualified": "你已被取消资格",
+
+
+
+    "Be careful at high speed": "高速行驶时要格外小心，",
+    "When going very fast (over 140Km/h)": "当车速很高（超过140公里/时）时，",
+    "be very careful with the steering as it": "转向会变得非常敏感，",
+    "is extremely easy to make a major": "稍有不慎就可能导致严重的",
+    "mistake. Make small corrections and": "失误。请保持冷静并进行小幅度修正，",
+    "try and go as straight as possible.": "尽量保持直线行驶。",
+    
+    "Listen!": "注意听！",
+    "Your co-driver's pacenotes are": "你的领航员的路书是",
+    "extremely important, so listen to": "非常重要的，所以要认真听取，",
+    "them and don't lose concentration, or": "不要分心，否则你可能会",
+    "you may find yourself taking a wrong": "走错路线，或者",
+    "turn or entering a hairpin at 140kph!": "以140公里/时的速度冲进发夹弯！",
+
+
     "make mistakes and suffer accidents as frequently as in": "犯下错误和发生事故。",
     "real life.": " ",
     "drivers. Beginner drivers get worse times, make more": "手的成绩不佳，比起专业车手会犯下更多失误，",
@@ -1291,12 +1312,14 @@
     "RSF Options": "RSF选项",
     "RBR Options": "RBR选项",
     "DISABLED": "已禁用",
+    "DISABLED ": "已禁用",
     "[< >] Switches a menu page": "[< >]切换菜单页面",
     "Cars": "车辆",
     "Use SPACEBAR key to toggle favorite cars": "点击空格键收藏或取消收藏该车辆",
     "(C) RBRControls by Steven Lee, mika-n, Towerbrah": "RBR插件由Steven Lee, mika-n, Towerbrah开发",
     "Dogleg Layout": "狗腿布局",
     "H-Pattern Behavior": "H挡",
+    "Normal ": "正常",
     "Advanced ": "进阶",
     "Gear Engagement": "换挡",
     "Synchro ": "同步器",
@@ -1963,7 +1986,7 @@
     "Start time": "发车时间",
     "Overall Standings": "总成绩",
     "Stage Results": "赛段成绩",
-    "Continue To Rally HQ": "返回拉力中心",
+    "Continue To Rally HQ": "返回拉力中心",   
     "Destination: Service Park": "目的地：维修区",
 
     "Select Car Setup": "选择车辆调校",
