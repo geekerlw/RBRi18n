@@ -201,6 +201,10 @@
     "HeavySnow PartCloud": "大雪 局部有云",
     "HeavySnow LightCloud": "大雪 薄云",
     "HeavySnow HeavyCloud": "大雪 厚云",
+    "5 min Road side service": "车手路边维修 - 5分钟",
+    "4 min Road side service": "车手路边维修 - 4分钟",
+    "3 min Road side service": "车手路边维修 - 3分钟",
+    "2 min Road side service": "车手路边维修 - 2分钟",
     "Road side service - 5 min": "车手路边维修 - 5分钟",
     "Road side service - 4 min": "车手路边维修 - 4分钟",
     "Road side service - 3 min": "车手路边维修 - 3分钟",
@@ -505,6 +509,7 @@
     "Split 5": "计时段5",
     " Enter Stage Comment: ": "（可选）你对本赛段的评价是：",
     " Rally Leg Finished": "本赛日已结束",
+    "Rally Leg Finished": "本赛日已结束",
     " Do you want to continue with SuperRally?": "你想以“超级拉力规则”继续下一个赛日吗？否则你将退出接下来所有赛日。",
     " Comment after your retirement from LEG: ": "（可选）赛日退赛后评论一下这个赛日：",
     " You will get time penalty for the following stages from this LEG": "你将在下一个赛段受到罚时",
@@ -1110,6 +1115,10 @@
     "Car Part": "车辆部件",
     "Windshield": "挡风玻璃",
     "Bodywork": "车身",
+    "Right Door": "右车门",
+    "Left Door": "左车门",
+    "    Fixing:  Right Door": "    修理：右车门",
+    "    Fixing:  Left Door": "    修理：左车门",
     "Front Bumper": "前保险杠",
     "Brake Circuit": "刹车液压管路",
     "Electrical System": "电控系统",
@@ -1129,6 +1138,7 @@
     "Light": "轻微",
     "Severe": "严重",
     "Lost": "缺失",
+    "You haven't repaired your car, do you want to repair it?": "你还没有修理你的车，你想修理吗？",
     "All repairs finished!": "所有修理已完成！",
     "[ NO ]": "否",
     "[ YES ]": "是",
@@ -1138,6 +1148,8 @@
     "Enter Stage Comment: ": "输入赛段评论：",
     "Comment after your retirement from rally: ": "退赛后的评论：",
     "You have been disqualified": "你已被取消资格",
+    "power stage": "加分赛段",
+    "Only pacenote audio": "仅路书语音",
 
 
 
@@ -1154,6 +1166,16 @@
     "them and don't lose concentration, or": "不要分心，否则你可能会",
     "you may find yourself taking a wrong": "走错路线，或者",
     "turn or entering a hairpin at 140kph!": "以140公里/时的速度冲进发夹弯！",
+
+    "Speed isn't everything": "速度并不是一切",
+    "If you feel like you can't control the": "如果你感觉自己无法控制",
+    "car, and you find you're crashing all": "车辆，并且发现自己总是在撞车，",
+    "the time, you're going too fast! Slow": "那说明你开得太快了！放慢速度，",
+    "down, and you'll end up with much": "这样你最终会获得更好的",
+    "better stage times. Professional rally": "赛段成绩。专业的拉力赛驾驶",
+    "driving is about knowing your limits,": "在于了解自己的极限，",
+    "and curbing your natural tendency to": "并抑制你本能中",
+    "push too hard.": "过度激进驾驶的倾向。",
 
 
     "make mistakes and suffer accidents as frequently as in": "犯下错误和发生事故。",
@@ -3326,6 +3348,24 @@
     "366 Daily Stages WRC": "第366日赛 WRC 组别"
   },
   "cars": {
+
+    "Super 2000": "Super 2000",
+    "Super 1600": "Super 1600",
+    "Group RGT": "RGT组",
+    "Group R5": "R5组",
+    "Group R4": "R4组",
+    "Group R3": "R3组",
+    "Group R2": "R2组",
+    "Group R1": "R1组",
+    "Group N4": "N4组",
+    "Group B": "B组",
+    "Group A8": "A8组",
+    "Group A7": "A7组",
+    "Group A6": "A6组",
+    "Group A5": "A5组",
+    "Group 4": "4组",
+    "Group 2": "2组",
+
     "[Super 2000]": "Super 2000",
     "[Super 1600]": "Super 1600",
     "[Group RGT]": "RGT组",
