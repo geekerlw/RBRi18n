@@ -1,4 +1,5 @@
 
+
 **English** | [中文](README_zh.md) | [繁體中文](README_zh-Hant.md) | [Português](README_pt.md) | [Suomi](README_fi.md) | [Русский](README_ru.md) | [日本語](README_jp.md) | [Magyar](README_hu.md)
 
 
@@ -28,7 +29,7 @@ A lightweight internationalization (i18n) plugin for **Richard Burns Rally (RBR)
 1. Download the latest zip file (from Releases)
 ![Download entry](downloadIntro1.png)   
 ![Download page](downloadIntro2.png)   
-2. Extract the RRBi18n-v1.x.x.zip file archive to get two folders: Plugins and RBRi18n
+2. Extract the RBRi18n-v1.x.x.zip file archive to get two folders: Plugins and RBRi18n
 ![Extracted result](downloadIntro3.png)   
 3. Drag both folders and their contents directly into your RBR game root directory
 ![Drag files](downloadIntro4.png)   
